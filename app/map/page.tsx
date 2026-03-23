@@ -4,9 +4,9 @@ import { useEffect, useState, useCallback } from 'react';
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import { reportsApi, Report, ReportQuery } from '@/lib/api';
+import MapFilters from '@/components/map/MapFilters';
 
 const MapView = dynamic(() => import('@/components/map/MapView'), { ssr: false });
-const MapFilters = dynamic(() => import('@/components/map/MapFilters'), { ssr: false });
 
 export default function MapPage() {
   const [reports, setReports] = useState<Report[]>([]);
